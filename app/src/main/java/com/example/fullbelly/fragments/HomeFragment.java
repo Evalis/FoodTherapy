@@ -33,7 +33,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 
-public class SearchFragment extends Fragment implements RecipeAdapter.OnListItemClickListener {
+public class HomeFragment extends Fragment implements RecipeAdapter.OnListItemClickListener {
     RecyclerView mRecipeList;
     RecipeAdapter mRecipeAdapter;
     Context c;
@@ -41,7 +41,7 @@ public class SearchFragment extends Fragment implements RecipeAdapter.OnListItem
     private MealViewModel mealViewModel;
 
 
-    public SearchFragment(MainActivity mainActivity, MealViewModel mealViewModel) {
+    public HomeFragment(MainActivity mainActivity, MealViewModel mealViewModel) {
         c = mainActivity;
         this.mealViewModel = mealViewModel;
     }
@@ -51,7 +51,7 @@ public class SearchFragment extends Fragment implements RecipeAdapter.OnListItem
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 
-        View rootView = inflater.inflate(R.layout.fragment_search, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         mRecipeList = rootView.findViewById(R.id.rv);
         mRecipeList.hasFixedSize();
         mRecipeList.setLayoutManager(new LinearLayoutManager(this.getActivity()));

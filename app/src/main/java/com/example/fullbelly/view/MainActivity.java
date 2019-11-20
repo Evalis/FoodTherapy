@@ -15,7 +15,7 @@ import android.widget.SearchView;
 import com.example.fullbelly.R;
 import com.example.fullbelly.fragments.FavoriteFragment;
 import com.example.fullbelly.fragments.NewRecipeFragment;
-import com.example.fullbelly.fragments.SearchFragment;
+import com.example.fullbelly.fragments.HomeFragment;
 import com.example.fullbelly.viewModel.MealViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SearchFragment(MainActivity.this, mealViewModel)).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment(MainActivity.this, mealViewModel)).commit();
 
    }
    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
                        case R.id.nav_favorite:
                            selectedFragment = new FavoriteFragment(MainActivity.this, mealViewModel);
                            break;
-                       case R.id.nav_search:
-                           selectedFragment = new SearchFragment(MainActivity.this, mealViewModel);
+                       case R.id.nav_home:
+                           selectedFragment = new HomeFragment(MainActivity.this, mealViewModel);
                            break;
                        case R.id.nav_newRecipe:
                            selectedFragment = new NewRecipeFragment();
