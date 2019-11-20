@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/nav_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/app_search"
+       />
+
+
+    <item android:id="@+id/nav_favorite"
+        android:icon="@drawable/ic_favorite"
+        android:title="@string/app_favorites"/>
+
+    <item android:id="@+id/nav_newRecipe"
+        android:icon="@drawable/ic_plus"
+        android:title="@string/app_newRecipe"
+        />
+
+
+</menu>

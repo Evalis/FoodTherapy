@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Full Belly</string>
+    <string name="app_home">Home</string>
+    <string name="app_favorites">Favorites</string>
+    <string name="app_search">Search</string>
+    <string name="app_newRecipe">New Recipe</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
