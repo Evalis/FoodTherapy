@@ -9,18 +9,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.fullbelly.view.AddNewRecipe;
 import com.example.fullbelly.view.MainActivity;
 import com.example.fullbelly.view.MealDetail;
 import com.example.fullbelly.R;
 import com.example.fullbelly.view.RecipeAdapter;
 import com.example.fullbelly.model.Meal;
 import com.example.fullbelly.viewModel.MealViewModel;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -51,6 +55,16 @@ public class FavoriteFragment extends Fragment implements RecipeAdapter.OnListIt
         mRecipeAdapter = new RecipeAdapter(this);
         mRecipeList.setAdapter(mRecipeAdapter);
 
+        FloatingActionButton fab = rootView.findViewById(R.id.floating_action_button);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AddNewRecipe.class);
+                startActivity(intent);
+
+
+            }
+        });
 
         mealViewModel.getAllFavoriteMeals().observe(this.getActivity(), new Observer<List<Meal>>() {
             @Override

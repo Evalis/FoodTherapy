@@ -1,28 +1,24 @@
-package com.example.fullbelly.fragments;
+package com.example.fullbelly.view;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
+
 import android.view.View;
-import android.view.ViewGroup;
+
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fullbelly.R;
 import com.example.fullbelly.model.Meal;
-import com.example.fullbelly.view.RecipeAdapter;
 import com.example.fullbelly.viewModel.MealViewModel;
 
-import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
+import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.lifecycle.ViewModelProviders;
 
-public class NewRecipeFragment extends Fragment {
+public class AddNewRecipe  extends AppCompatActivity {
 
     Button button;
 
@@ -31,25 +27,24 @@ public class NewRecipeFragment extends Fragment {
     private MealViewModel mealViewModel;
 
 
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_addnewrecipe);
 
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View v = inflater.inflate(R.layout.fragmnet_newrecipe, container,false);
 
         mealViewModel = ViewModelProviders.of(this).get(MealViewModel.class);
-        editTitle = v.findViewById(R.id.editTitle);
-        editDescription = v.findViewById(R.id.editDescription);
-        button = v.findViewById(R.id.saveButton);
+        editTitle = findViewById(R.id.editTitle);
+        editDescription = findViewById(R.id.editDescription);
+        button = findViewById(R.id.saveButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 addNewRecipe(view);
+                goToMainActivity();
+
             }
         });
 
-        return v;
             }
 
 
@@ -61,5 +56,11 @@ public class NewRecipeFragment extends Fragment {
         meal.setStrInstructions(editDescription.getText().toString());
 
         mealViewModel.insert(meal);
+        Toast.makeText(this, "New Recipe was added to Favorites", Toast.LENGTH_LONG).show();
 }
+
+    private void goToMainActivity() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
 }

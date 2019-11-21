@@ -5,16 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.SearchView;
-
 import com.example.fullbelly.R;
+import com.example.fullbelly.fragments.BackupFragment;
 import com.example.fullbelly.fragments.FavoriteFragment;
-import com.example.fullbelly.fragments.NewRecipeFragment;
 import com.example.fullbelly.fragments.HomeFragment;
 import com.example.fullbelly.viewModel.MealViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -28,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         mealViewModel = ViewModelProviders.of(this).get(MealViewModel.class);
         mealViewModel.updateMeals("");
 
@@ -40,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment(MainActivity.this, mealViewModel)).commit();
 
    }
+
    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
            new BottomNavigationView.OnNavigationItemSelectedListener() {
                @Override
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
                        case R.id.nav_home:
                            selectedFragment = new HomeFragment(MainActivity.this, mealViewModel);
                            break;
-                       case R.id.nav_newRecipe:
-                           selectedFragment = new NewRecipeFragment();
+                       case R.id.nav_backup:
+                           selectedFragment = new BackupFragment();
                            break;
                    }
                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();

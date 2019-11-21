@@ -4,6 +4,8 @@
     <string name="app_favorites">Favorites</string>
     <string name="app_search">Search</string>
     <string name="app_newRecipe">New Recipe</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="app_backup">Backup</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
 
 </resources>

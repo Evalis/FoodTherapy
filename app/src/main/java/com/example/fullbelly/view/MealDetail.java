@@ -1,11 +1,13 @@
 package com.example.fullbelly.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
@@ -83,6 +85,7 @@ public class MealDetail extends AppCompatActivity {
 
                 addToFavorite(view);
                 heartView.setImageResource(R.drawable.ic_favorite_full);
+                goToMainActivity();
 
             }
         });
@@ -107,7 +110,13 @@ public class MealDetail extends AppCompatActivity {
             meal.setStrInstructions(description.getText().toString());
 
             mealViewModel.insert(meal);
+            Toast.makeText(this, "Recipe added to Favorites", Toast.LENGTH_LONG).show();
         }
+
+    private void goToMainActivity() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
 
     }
 
