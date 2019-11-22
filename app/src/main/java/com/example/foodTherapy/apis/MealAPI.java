@@ -1,4 +1,4 @@
-package com.example.fullbelly.apis;
+package com.example.foodTherapy.apis;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

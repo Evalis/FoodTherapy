@@ -1,9 +1,9 @@
-package com.example.fullbelly.viewModel;
+package com.example.foodTherapy.viewModel;
 
 import android.app.Application;
 
-import com.example.fullbelly.model.Meal;
-import com.example.fullbelly.repositories.MealRepository;
+import com.example.foodTherapy.model.Meal;
+import com.example.foodTherapy.repositories.MealRepository;
 
 import java.util.List;
 

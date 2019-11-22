@@ -1,4 +1,4 @@
-package com.example.fullbelly.view;
+package com.example.foodTherapy.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.fullbelly.R;
+import com.example.foodTherapy.R;
 
 
 public class WelcomeActivity extends AppCompatActivity {

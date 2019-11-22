@@ -1,4 +1,4 @@
-package com.example.fullbelly.view;
+package com.example.foodTherapy.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
-import com.example.fullbelly.R;
-import com.example.fullbelly.model.Meal;
-import com.example.fullbelly.viewModel.MealViewModel;
+import com.example.foodTherapy.R;
+import com.example.foodTherapy.model.Meal;
+import com.example.foodTherapy.viewModel.MealViewModel;
 
 
 

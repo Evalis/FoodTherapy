@@ -1,4 +1,4 @@
-package com.example.fullbelly.view;
+package com.example.foodTherapy.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +14,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.SearchView;
 import android.widget.Toast;
-import com.example.fullbelly.R;
-import com.example.fullbelly.fragments.FavoriteFragment;
-import com.example.fullbelly.fragments.HomeFragment;
-import com.example.fullbelly.model.Meal;
-import com.example.fullbelly.viewModel.MealViewModel;
+import com.example.foodTherapy.R;
+import com.example.foodTherapy.fragments.FavoriteFragment;
+import com.example.foodTherapy.fragments.HomeFragment;
+import com.example.foodTherapy.model.Meal;
+import com.example.foodTherapy.viewModel.MealViewModel;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;

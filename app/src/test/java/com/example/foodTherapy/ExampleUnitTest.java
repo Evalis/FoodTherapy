@@ -1,4 +1,4 @@
-package com.example.fullbelly;
+package com.example.foodTherapy;
 
 import org.junit.Test;
 

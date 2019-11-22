@@ -1,7 +1,7 @@
-package com.example.fullbelly.database;
+package com.example.foodTherapy.database;
 
 
-import com.example.fullbelly.model.Meal;
+import com.example.foodTherapy.model.Meal;
 
 import java.util.List;
 

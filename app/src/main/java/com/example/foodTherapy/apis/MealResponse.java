@@ -1,8 +1,8 @@
-package com.example.fullbelly.apis;
+package com.example.foodTherapy.apis;
 
 import java.util.List;
 
-import com.example.fullbelly.model.Meal;
+import com.example.foodTherapy.model.Meal;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

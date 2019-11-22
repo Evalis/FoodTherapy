@@ -1,14 +1,14 @@
-package com.example.fullbelly.repositories;
+package com.example.foodTherapy.repositories;
 
 import android.app.Application;
 import android.os.AsyncTask;
 import android.util.Log;
-import com.example.fullbelly.apis.MealAPI;
-import com.example.fullbelly.apis.MealResponse;
-import com.example.fullbelly.apis.MealServiceGenerator;
-import com.example.fullbelly.database.MealDao;
-import com.example.fullbelly.database.MealDatabase;
-import com.example.fullbelly.model.Meal;
+import com.example.foodTherapy.apis.MealAPI;
+import com.example.foodTherapy.apis.MealResponse;
+import com.example.foodTherapy.apis.MealServiceGenerator;
+import com.example.foodTherapy.database.MealDao;
+import com.example.foodTherapy.database.MealDatabase;
+import com.example.foodTherapy.model.Meal;
 import java.util.List;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

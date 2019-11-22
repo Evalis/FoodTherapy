@@ -1,4 +1,4 @@
-package com.example.fullbelly.model;
+package com.example.foodTherapy.model;
 
 
 

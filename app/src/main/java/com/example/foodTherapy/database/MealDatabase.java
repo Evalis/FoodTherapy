@@ -1,9 +1,9 @@
-package com.example.fullbelly.database;
+package com.example.foodTherapy.database;
 
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.example.fullbelly.model.Meal;
+import com.example.foodTherapy.model.Meal;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
