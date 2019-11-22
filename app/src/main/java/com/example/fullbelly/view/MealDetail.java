@@ -3,13 +3,10 @@ package com.example.fullbelly.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
-
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
 import com.bumptech.glide.Glide;
 import com.example.fullbelly.R;
 import com.example.fullbelly.model.Meal;
@@ -24,45 +21,25 @@ import androidx.lifecycle.ViewModelProviders;
 public class MealDetail extends AppCompatActivity {
 
     private MealViewModel mealViewModel;
-    private Meal meal;
-
+    Meal meal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meal_detail);
 
-        final int mealIndex;
+
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if (extras == null) {
-                mealIndex = -1;
+                meal = null;
             } else {
-                mealIndex = extras.getInt("mealIndex");
+                meal = (Meal)extras.getSerializable("Meal");
             }
         } else {
-            mealIndex = (int) savedInstanceState.getSerializable("mealIndex");
+            meal = (Meal) savedInstanceState.getSerializable("mealIndex");
         }
-
-        final boolean favorite;
-        if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if (extras == null) {
-                favorite = false;
-            } else {
-                favorite = extras.getBoolean("favorite");
-            }
-        } else {
-            favorite = (boolean) savedInstanceState.getSerializable("favorite");
-        }
-
 
         mealViewModel = ViewModelProviders.of(this).get(MealViewModel.class);
-
-        if (favorite) {
-            meal = mealViewModel.getAllFavoriteMeals().getValue().get(mealIndex);
-        } else {
-            meal = mealViewModel.getAllMeals().getValue().get(mealIndex);
-        }
 
 
         TextView textView = findViewById(R.id.textView);
@@ -106,7 +83,6 @@ public class MealDetail extends AppCompatActivity {
 
             Meal meal = new Meal();
             meal.setStrMeal(textView.getText().toString());
-            meal.setStrMealThumb(imageView.toString());
             meal.setStrInstructions(description.getText().toString());
 
             mealViewModel.insert(meal);

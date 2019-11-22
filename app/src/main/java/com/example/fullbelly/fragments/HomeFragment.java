@@ -6,13 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.Toast;
-
-
 import com.example.fullbelly.view.MainActivity;
 import com.example.fullbelly.view.MealDetail;
 import com.example.fullbelly.R;
@@ -21,10 +17,7 @@ import com.example.fullbelly.view.RecipeAdapter;
 import com.example.fullbelly.model.Meal;
 import com.example.fullbelly.viewModel.MealViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-
 import java.util.List;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -72,7 +65,6 @@ public class HomeFragment extends Fragment implements RecipeAdapter.OnListItemCl
         mealViewModel.getAllMeals().observe(this.getActivity(), new Observer<List<Meal>>() {
             @Override
             public void onChanged(List<Meal> meals) {
-                Log.i("Retrofit", "observer change triggered");
                mRecipeAdapter.setMeals(meals);
 
             }
@@ -81,14 +73,13 @@ public class HomeFragment extends Fragment implements RecipeAdapter.OnListItemCl
         return rootView;
     }
 
-    public void onListItemClick(int clickedItemIndex) {
-        int recipeNumber = clickedItemIndex + 1;
+    public void onListItemClick(Meal meal) {
 
 
         Intent intent = new Intent(c, MealDetail.class);
-        intent.putExtra("mealIndex", clickedItemIndex);
+        intent.putExtra("Meal", meal);
         startActivity(intent);
-        Toast.makeText(c,"Recipe number " + recipeNumber,Toast.LENGTH_SHORT).show();
+
 
     }
 

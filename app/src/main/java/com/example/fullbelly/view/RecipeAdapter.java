@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
 
         public interface OnListItemClickListener {
-        void onListItemClick(int clickedItemIndex);
+        void onListItemClick(Meal meal);
     }
 
     private List<Meal> meals;
@@ -61,6 +61,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         notifyDataSetChanged();
     }
 
+    public Meal getMealAt(int position)
+    {
+        return meals.get(position);
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView text;
@@ -79,7 +84,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
         @Override
         public void onClick(View view) {
-            mOnListItemClickListener.onListItemClick(getAdapterPosition());
+            mOnListItemClickListener.onListItemClick(meals.get(getAdapterPosition()));
 
         }
 

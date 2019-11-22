@@ -22,7 +22,6 @@ public abstract class MealDatabase extends RoomDatabase {
             instance = Room.databaseBuilder(context.getApplicationContext(),
                     MealDatabase.class, "meal_database")
                     .fallbackToDestructiveMigration()
-                    .addCallback(roomCallback)
                     .build();
         }
         return instance;

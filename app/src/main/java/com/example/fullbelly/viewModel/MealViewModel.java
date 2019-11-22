@@ -34,6 +34,12 @@ public class MealViewModel extends AndroidViewModel {
         repository.insert(meal);
     }
     public void updateMeals(String query) {
+
         repository.updateMeals(query);
+    }
+
+    public void delete(Meal meal)
+    {
+        repository.delete(meal);
     }
 }

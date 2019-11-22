@@ -3,16 +3,13 @@ package com.example.fullbelly.repositories;
 import android.app.Application;
 import android.os.AsyncTask;
 import android.util.Log;
-
 import com.example.fullbelly.apis.MealAPI;
 import com.example.fullbelly.apis.MealResponse;
 import com.example.fullbelly.apis.MealServiceGenerator;
 import com.example.fullbelly.database.MealDao;
 import com.example.fullbelly.database.MealDatabase;
 import com.example.fullbelly.model.Meal;
-
 import java.util.List;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import retrofit2.Call;
@@ -33,6 +30,7 @@ public class MealRepository {
         meals = new MutableLiveData<>();
 
         MealDatabase database = MealDatabase.getInstance(application);
+
         mealDao = database.mealDao();
     }
 

@@ -16,9 +16,7 @@ public class MealResponse {
         return meals;
     }
 
-    public void setMeals(List<Meal> meals) {
-        this.meals = meals;
-    }
+
 
 }
 
