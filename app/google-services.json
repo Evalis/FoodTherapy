@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "664190812299",
+    "firebase_url": "https://fullbelly-a232a.firebaseio.com",
+    "project_id": "fullbelly-a232a",
+    "storage_bucket": "fullbelly-a232a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664190812299:android:4208a448a69b989818948e",
+        "android_client_info": {
+          "package_name": "com.example.fullbelly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664190812299-920sddje92gsgh7gu4ks9oa79698gcon.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fullbelly",
+            "certificate_hash": "284b927c9f28d0c990e473fdcbbf4d93e35c2d1f"
+          }
+        },
+        {
+          "client_id": "664190812299-6rvjb4bqekdpgubc2t6qc2brgf43lgja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDND9rahQGRr8tiInpoVUmme-xnacuFNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664190812299-6rvjb4bqekdpgubc2t6qc2brgf43lgja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
