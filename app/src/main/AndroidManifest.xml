@@ -29,9 +29,12 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".view.MainActivity" />
-        <activity android:name=".view.AddNewRecipe" />
-        <activity android:name=".view.MealDetail" />
+        <activity android:name=".view.MainActivity"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity android:name=".view.AddNewRecipe"
+            android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name=".view.MealDetail"
+            android:configChanges="orientation|keyboardHidden"/>
         <activity android:name=".view.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
